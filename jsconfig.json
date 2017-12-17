@@ -3,6 +3,7 @@
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "checkJs": true,
+        "experimentalDecorators": true,
         "moduleResolution": "node",
         "strict": true,
         "target": "es6",

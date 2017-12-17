@@ -1,10 +1,11 @@
+import "tailwindcss/dist/tailwind.min.css"
 import Vue from "vue";
-
-document.getElementById("app1").innerHTML = `
-    <h1>My awesome app</h1>
-`
+import App from "./App";
 
 new Vue({
-    el: "#app2",
-    render: h => <div> Hello from vue </div>
-})
+    el: "#app",
+    template: "<App></App>",
+    components: {
+        App
+    }
+});

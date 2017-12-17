@@ -5,8 +5,14 @@
   "author": "74joma@gmail.com",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-poi": "^1.1.2",
     "http-server": "^0.10.0",
-    "poi": "^9.6.1"
+    "poi": "^9.6.1",
+    "tailwindcss": "^0.4.0",
+    "vue": "^2.5.11",
+    "vue-class-component": "^6.1.2",
+    "vue-loader": "^13.6.0",
+    "vue-template-compiler": "^2.5.11"
   },
   "dependencies": {}
 }
