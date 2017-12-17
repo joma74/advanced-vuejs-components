@@ -8,7 +8,5 @@
     "http-server": "^0.10.0",
     "poi": "^9.6.1"
   },
-  "dependencies": {
-    "rxjs": "^5.5.5"
-  }
+  "dependencies": {}
 }
