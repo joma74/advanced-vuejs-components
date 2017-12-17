@@ -4,7 +4,7 @@ import App from "./App";
 
 new Vue({
     el: "#app",
-    template: "<App></App>",
+    template: "<App message='Hello from index'></App>",
     components: {
         App
     }
