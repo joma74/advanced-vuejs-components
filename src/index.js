@@ -1,10 +1,10 @@
 import "tailwindcss/dist/tailwind.min.css"
 import Vue from "vue";
-import App from "./App";
+import App from "./App.vue";
 
 new Vue({
     el: "#app",
-    template: "<App message='Hello from index'></App>",
+    template: "<App></App>",
     components: {
         App
     }

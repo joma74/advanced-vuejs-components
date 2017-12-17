@@ -4,14 +4,15 @@
 
 <script>
 import Vue from "vue";
-import Component from "vue-class-component";
+import { Component, Prop } from "vue-property-decorator";
 
-@Component({ props:{
-  message: {
-    default: "Hello from default prop"
-  }
-}})
+@Component({})
 export default class App extends Vue {
+  /**
+   * @type {string}
+   */
+  @Prop({ default: "Hello from Prop decorator" })
+  message;
 
   onClick() {
     this.message = "goodbye from class";
