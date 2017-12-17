@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+function storeNmbinPATH
+{
+    export PATH=$(npm bin):$PATH;
+}
+function storeLibsPATH
+{
+    export PATH=$PWD/libs:$PATH;
+}
+function storeWsRoot(){
+    export WSROOT=$PWD;
+}
+function unsetProxies(){
+   unset http_proxy;
+   unset HTTP_PROXY;
+   unset https_proxy;
+   unset HTTPS_PROXY;
+}
+OLDPATH=$PATH;
+storeNmbinPATH;
+storeLibsPATH;
+storeWsRoot;
+unsetProxies;
+

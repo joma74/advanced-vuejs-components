@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "checkJs": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "target": "es6",
+        "baseUrl": "./",
+        "lib": [
+            "es2016",
+            "dom"
+        ],
+        "sourceMap": true,
+        "types": [
+            "node"
+        ],
+        "traceResolution": false
+    },
+    "exclude": [
+        "dist",
+        "node_modules",
+        "target",
+        "profiles"
+    ],
+    "include": [
+        "src/**/*"
+    ],
+    "typeAcquisition": {
+        "include": ["node"]
+    }
+}

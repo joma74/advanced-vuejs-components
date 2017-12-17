@@ -1,0 +1,14 @@
+{
+  "name": "advanced-vuejs-components",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "74joma@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "poi": "^9.6.1"
+  },
+  "dependencies": {
+    "rxjs": "^5.5.5"
+  }
+}
