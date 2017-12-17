@@ -6,13 +6,12 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 
-export default Component({})(
-  class App extends Vue {
-    message = "hello from class";
+@Component({})
+export default class App extends Vue {
+  message = "hello from class";
 
-    onClick(){
-      this.message = "goodbye from class" 
-    }
+  onClick() {
+    this.message = "goodbye from class";
   }
-);
+}
 </script>
