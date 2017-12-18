@@ -1,5 +1,10 @@
 <template>
-  <div @click="onClick">{{message}}</div>
+  <div>
+    <!-- slot[name="header"] emmet abbreviation for ↓ -->
+    <slot name="header"></slot>
+    <h1 @click="onClick">{{message}}</h1>
+    <slot name="footer"></slot>
+  </div>
 </template>
 
 <script>

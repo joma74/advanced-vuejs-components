@@ -16,7 +16,8 @@
         "types": [
             "node"
         ],
-        "traceResolution": false
+        "traceResolution": false,
+        "jsx": "preserve"
     },
     "exclude": [
         "dist",
