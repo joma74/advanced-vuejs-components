@@ -6,7 +6,8 @@ new Vue({
     el: "#app",
     render: h => (
         <App>
-            <h2 slot="header" class="text-orange">Where did i go?</h2>
+            <h2 slot="header" class="text-orange">Header</h2>
+            <h3 slot="footer" class="text-green">Footer</h3>
         </App>
     )
 });
