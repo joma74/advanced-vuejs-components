@@ -1,17 +1,19 @@
 <template>
-  <div>
-    <!-- slot[name="header"] emmet abbreviation for ↓ -->
-    <slot name="header"></slot>
-    <h1 @click="onClick">{{message}}</h1>
-    <slot name="footer"></slot>
-  </div>
+  <Layout>
+    <h1 slot="content" class="flex-grow" @click="onClick">Content goes here "{{message}}"!</h1>
+  </Layout>
 </template>
 
 <script>
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
+import Layout from "./Layout.vue";
 
-@Component({})
+@Component({
+  components: {
+    Layout
+  }
+})
 export default class App extends Vue {
   /**
    * @type {string}
@@ -20,7 +22,7 @@ export default class App extends Vue {
   message;
 
   onClick() {
-    this.message = "goodbye from class";
+    this.message = "Goodbye " + this.message;
   }
 }
 </script>
