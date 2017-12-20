@@ -3,6 +3,7 @@
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "checkJs": true,
+        "experimentalDecorators": true,
         "moduleResolution": "node",
         "strict": true,
         "target": "es6",
@@ -15,7 +16,8 @@
         "types": [
             "node"
         ],
-        "traceResolution": false
+        "traceResolution": false,
+        "jsx": "preserve"
     },
     "exclude": [
         "dist",
@@ -24,9 +26,10 @@
         "profiles"
     ],
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "types/**/*"
     ],
     "typeAcquisition": {
-        "include": ["node"]
+        "enable": true
     }
 }
