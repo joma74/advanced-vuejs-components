@@ -13,9 +13,6 @@
             "dom"
         ],
         "sourceMap": true,
-        "types": [
-            "node"
-        ],
         "traceResolution": false,
         "jsx": "preserve"
     },
@@ -26,9 +23,10 @@
         "profiles"
     ],
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "types/**/*"
     ],
     "typeAcquisition": {
-        "include": ["node"]
+        "enable": true
     }
 }
