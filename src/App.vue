@@ -4,6 +4,7 @@
       <Header slot="header" :header="header"><!-- prop header is pushed to Header -->
           <!-- content of Header is taken as content for slot "header" -->
       </Header>
+      <Content slot="content"></Content>
       <Footer slot="footer" :footer="footer"><!-- prop footer is pushed to Footer -->
           <!-- content of Footer is taken as content for slot "footer" -->
       </Footer>
@@ -14,16 +15,17 @@
 <script>
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import {Header, Footer} from "./components"
-import Layout from "./Layout.vue"
+import { Header, Footer, Content } from "./components";
+import Layout from "./Layout.vue";
 import Settings from "./Settings.vue";
 
 @Component({
   components: {
+    Content,
     Footer,
     Header,
     Layout,
-    Settings,
+    Settings
   }
 })
 export default class App extends Vue {
