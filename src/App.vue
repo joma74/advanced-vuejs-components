@@ -1,8 +1,12 @@
 <template>
   <Settings>
-    <Layout slot-scope="{header, footer}">
-      <h1 slot="header" class="bg-blue text-white p-2">{{header}}</h1>
-      <h2 slot="footer" class="bg-grey-light text-blue text-center p-2">{{footer}}</h2>
+    <Layout slot-scope="{header, footer}"> <!-- props header and footer come from Settings -->
+      <Header slot="header" :header="header"><!-- prop header is pushed to Header -->
+          <!-- content of Header is taken as content for slot "header" -->
+      </Header>
+      <Footer slot="footer" :footer="footer"><!-- prop footer is pushed to Footer -->
+          <!-- content of Footer is taken as content for slot "footer" -->
+      </Footer>
     </Layout>
   </Settings>
 </template>
@@ -10,13 +14,16 @@
 <script>
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import Layout from "./Layout.vue";
+import {Header, Footer} from "./components"
+import Layout from "./Layout.vue"
 import Settings from "./Settings.vue";
 
 @Component({
   components: {
+    Footer,
+    Header,
     Layout,
-    Settings
+    Settings,
   }
 })
 export default class App extends Vue {
