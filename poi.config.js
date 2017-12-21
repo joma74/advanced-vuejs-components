@@ -5,7 +5,6 @@ module.exports = {
         contributors: ["Mindy", "John", "Jörg"]
     },
     presets: [
-        require("babel-preset-poi")
+        require("poi-preset-bundle-report")()
     ],
-    templateCompiler: true
 }

@@ -4,10 +4,15 @@
   "main": "src/index.js",
   "author": "74joma@gmail.com",
   "license": "MIT",
+  "scripts": {
+    "build-report": "poi build --bundle-report",
+    "build-serve": "poi build && http-server dist/"
+  },
   "devDependencies": {
     "babel-preset-poi": "^1.1.2",
     "http-server": "^0.10.0",
     "poi": "^9.6.1",
+    "poi-preset-bundle-report": "^2.0.2",
     "tailwindcss": "^0.4.0",
     "vue": "^2.5.11",
     "vue-loader": "^13.6.0",
