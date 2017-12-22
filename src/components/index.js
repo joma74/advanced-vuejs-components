@@ -3,6 +3,10 @@ export {
 }
 from "./Footer.vue"
 export {
+    default as Cats
+}
+from "./Cats"
+export {
     default as Content
 }
 from "./Content.vue"

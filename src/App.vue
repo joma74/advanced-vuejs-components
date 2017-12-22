@@ -21,17 +21,9 @@
 <script>
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { Header, Footer, Content } from "./components";
+import { Header, Footer, Cats, Content } from "./components";
 import Layout from "./Layout.vue";
 import Settings from "./Settings.vue";
-
-const Cats = {
-  functional: true,
-  render: (h, {props}) => (<div>{
-    props.names.map(name => `https://robohash.org/${name}?set=set${props.num}`).
-    map(url => <img src={url} />)
-  }</div>)
-}
 
 @Component({
   components: {
