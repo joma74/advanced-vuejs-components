@@ -1,9 +1,9 @@
 <template>
   <Settings>
     <Layout slot-scope="{header, footer}"> <!-- props header and footer come from Settings -->
-      <Header slot="header" :header="header"><!-- prop header is pushed to Header -->
+      <AwesomeHeader slot="header" :header="header"><!-- prop header is pushed to Header -->
           <!-- content of Header is taken as content for slot "header" -->
-      </Header>
+      </AwesomeHeader>
       <Content slot="content" :limit="1">
         <div><img src="https://robohash.org/mindy?set=set4" alt=""></div>
         <div><img src="https://robohash.org/john?set=set4" alt=""></div>
@@ -11,9 +11,9 @@
         <div><img src="https://robohash.org/joel?set=set4" alt=""></div>
         <div><img src="https://robohash.org/maggie?set=set4" alt=""></div>
       </Content>
-      <Footer slot="footer" :footer="footer"><!-- prop footer is pushed to Footer -->
+      <AwesomeFooter slot="footer" :footer="footer"><!-- prop footer is pushed to Footer -->
           <!-- content of Footer is taken as content for slot "footer" -->
-      </Footer>
+      </AwesomeFooter>
     </Layout>
   </Settings>
 </template>
@@ -28,8 +28,8 @@ import Settings from "./Settings.vue";
 @Component({
   components: {
     Content,
-    Footer,
-    Header,
+    AwesomeFooter: Footer,
+    AwesomeHeader:Header,
     Layout,
     Settings
   }
