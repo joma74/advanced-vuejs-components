@@ -4,7 +4,13 @@
       <Header slot="header" :header="header"><!-- prop header is pushed to Header -->
           <!-- content of Header is taken as content for slot "header" -->
       </Header>
-      <Content slot="content"></Content>
+      <Content slot="content" :limit="1">
+        <div><img src="https://robohash.org/mindy?set=set4" alt=""></div>
+        <div><img src="https://robohash.org/john?set=set4" alt=""></div>
+        <div><img src="https://robohash.org/kim?set=set4" alt=""></div>
+        <div><img src="https://robohash.org/joel?set=set4" alt=""></div>
+        <div><img src="https://robohash.org/maggie?set=set4" alt=""></div>
+      </Content>
       <Footer slot="footer" :footer="footer"><!-- prop footer is pushed to Footer -->
           <!-- content of Footer is taken as content for slot "footer" -->
       </Footer>
