@@ -4,7 +4,7 @@
       <AwesomeHeader slot="header" :header="header"><!-- prop header is pushed to Header -->
           <!-- content of Header is taken as content for slot "header" -->
       </AwesomeHeader>
-      <Cats slot="content" :names="names">
+      <Cats slot="content" :names="names" :num="3">
         <div><img src="https://robohash.org/mindy?set=set4" alt=""></div>
         <div><img src="https://robohash.org/john?set=set4" alt=""></div>
         <div><img src="https://robohash.org/kim?set=set4" alt=""></div>
@@ -28,7 +28,7 @@ import Settings from "./Settings.vue";
 const Cats = {
   functional: true,
   render: (h, {props}) => (<div>{
-    props.names.map(name => `https://robohash.org/${name}?set=set4`).
+    props.names.map(name => `https://robohash.org/${name}?set=set${props.num}`).
     map(url => <img src={url} />)
   }</div>)
 }
