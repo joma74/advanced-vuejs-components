@@ -5,6 +5,7 @@
           <!-- content of Header is taken as content for slot "header" -->
       </AwesomeHeader>
       <Cats slot="content" :names="names" :num="3">
+        <!-- Alternate content, the cats -->
         <div><img src="https://robohash.org/mindy?set=set4" alt=""></div>
         <div><img src="https://robohash.org/john?set=set4" alt=""></div>
         <div><img src="https://robohash.org/kim?set=set4" alt=""></div>
