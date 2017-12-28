@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Vue, { FunctionalComponentOptions} from "vue"; 
+import Vue, { FunctionalComponentOptions } from "vue"; 
 import { Component, Prop } from "vue-property-decorator";
 import { Header, Footer } from "./components";
 import Layout from "./Layout.vue";
@@ -32,7 +32,7 @@ import Settings from "./Settings.vue";
  */
 const One = {
   functional: true,
-  name: "One",
+  name: "OneTada",
   render: (h) => <h1 class="bg-red">A One</h1>
 };
 
@@ -42,19 +42,19 @@ const One = {
  */
 const Two ={
   functional: true,
-  name: "Two",
+  name: "TwoTada",
   render: h => <h1 class="bg-green">A Two</h1>
 };
 
 /**
- * !Keep this a simple js object. Do not try as Vue.extend or Vue.component.
- * @type {FunctionalComponentOptions}
+ * A function by the name of "ThreeTada" :)
  */
-const Three = {
-  functional: true,
-  name: "Three",
-  render: h => <h1 class="bg-purple">A Three</h1>
-};
+const ThreeTada = () => (
+  {
+  // The component to load. Should be a Promise
+  component: import(/* webpackChunkName: "Three" */ './components/Three')
+  }
+);
 
 @Component({
   components: {
@@ -65,7 +65,7 @@ const Three = {
   }
 })
 export default class App extends Vue {
-  comps = [One, Two, Three]
+  comps = [One, Two, ThreeTada]
   selectedComp = this.comps[0]
 }
 </script>
