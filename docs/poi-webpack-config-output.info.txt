@@ -1,0 +1,6 @@
+// poi/lib/index.js
+const util = require('util');
+...
+RegExp.prototype.toJSON = RegExp.prototype.toString;
+// console.log("webpack config -> " + JSON.stringify(webpackConfig, null,2));
+console.log("webpack config -> " + util.inspect(webpackConfig, { depth: null }));
