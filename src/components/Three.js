@@ -1,13 +1,12 @@
-import Vue, { FunctionalComponentOptions } from "vue";
+import Vue, { Component } from "vue";
 
 /**
- * !Keep this a simple js object. Do not try as Vue.extend or Vue.component.
- * @type {FunctionalComponentOptions}
+ * @type {Component}
  */
-const Three = Vue.component("Three",{
-    functional: true,
-    name: "Three",
-    render: h => <h1 class="bg-purple">A Three</h1>
+const Three = Vue.component("Three", {
+  functional: true,
+  name: "Three",
+  render: h => <h1 class="bg-purple">A Three</h1>
 });
 
 export default Three;
