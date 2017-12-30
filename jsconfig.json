@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "checkJs": true,
         "experimentalDecorators": true,
@@ -13,7 +12,6 @@
             "dom"
         ],
         "sourceMap": true,
-        "traceResolution": false,
         "jsx": "preserve"
     },
     "exclude": [
