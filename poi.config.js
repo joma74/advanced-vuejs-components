@@ -1,10 +1,9 @@
+const path = require("path");
+
 module.exports = {
-    html: {
-        template: "./src/index.ejs",
-        course: "Poi Lesson",
-        contributors: ["Mindy", "John", "Jörg"]
-    },
-    presets: [
-        require("poi-preset-bundle-report")()
-    ],
-}
+  html: {
+    template: "./src/index.ejs",
+  },
+  presets: [require("poi-preset-bundle-report")()],
+  extractCSS: true
+};
