@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <Settings>
     <Layout slot-scope="{header, footer}"> <!-- props header and footer come from Settings -->
       <AwesomeHeader slot="header" :header="header"><!-- prop header is pushed to Header -->
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Vue, { FunctionalComponentOptions } from "vue"; 
+import Vue, { FunctionalComponentOptions } from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import { Header, Footer } from "./components";
 import Layout from "./Layout.vue";
@@ -33,14 +33,14 @@ import Settings from "./Settings.vue";
 const One = {
   functional: true,
   name: "OneTada",
-  render: (h) => <h1 class="bg-red">A One</h1>
+  render: h => <h1 class="bg-red">A One</h1>
 };
 
 /**
  * !Keep this a simple js object. Do not try as Vue.extend or Vue.component.
  * @type {FunctionalComponentOptions}
  */
-const Two ={
+const Two = {
   functional: true,
   name: "TwoTada",
   render: h => <h1 class="bg-green">A Two</h1>
@@ -49,12 +49,10 @@ const Two ={
 /**
  * A function by the name of "ThreeTada" :)
  */
-const ThreeTada = () => (
-  {
+const ThreeTada = () => ({
   // The component to load. Should be a Promise
-  component: import(/* webpackChunkName: "Three" */ './components/Three')
-  }
-);
+  component: import(/* webpackChunkName: "Three" */ "./components/Three")
+});
 
 @Component({
   components: {
@@ -65,7 +63,7 @@ const ThreeTada = () => (
   }
 })
 export default class App extends Vue {
-  comps = [One, Two, ThreeTada]
-  selectedComp = this.comps[0]
+  comps = [One, Two, ThreeTada];
+  selectedComp = this.comps[0];
 }
 </script>
