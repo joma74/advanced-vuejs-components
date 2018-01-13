@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build-report": "poi build --bundle-report",
+    "build-stats": "poi build --generate-stats dist/stats.json",
     "build-serve": "poi build && http-server dist/"
   },
   "devDependencies": {
